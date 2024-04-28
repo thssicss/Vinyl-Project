@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAUS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Playfair -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- SCRIPT -->
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li"><a href="#" class="header__a">Shop</a></li>
+                <li class="header__li"><a href="#" class="header__a">Jornal</a></li>
+            </ul>
+        </nav>
+        <img src="./assets/img/Haus-Logo-White.webp" alt="" class="header__img">
+        <svg class="header__icon icon-cart-empty" aria-hidden="true" focusable="false"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+            <path
+                d="m15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.78-11.61zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1 -9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z"
+                fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!--Banner-->
+        <section class="section" id="">
+            <article class="section__article--main">
+                <h1 class="section_h1--main">Haus</h1>
+            </article>
+        </section>
+
+        <!--SObre-->
+        <!-- <h1></h1>
+        <section>
+            <p style="color: white;">
+                ¡Bienvenid@ a nuestro sitio web dedicado al mundo del vinilo! Aquí encontrarás
+                un espacio donde podrás explorar la música de tus artistas favoritos mientras te sumerges en la rica
+                experiencia del vinilo. Desde clásicos atemporales hasta joyas ocultas, nuestro objetivo es brindarte un
+                viaje musical único donde puedas descubrir nuevas melodías y redescubrir viejos favoritos. ¡Únete a
+                nosotros y sumérgete en el fascinante universo del vinilo!
+            </p>
+        </section> -->
+
+        <!--Generos-->
+        <h1 class="main__h1--generos">Selecione un genero</h1>
+        <section class="section--generos">
+            <div class="section__container--generos top">
+                <div class="section__div--generos" onclick="clearAndGenerateArticles(hiphop)">
+                    <img src="./assets/img/hiphop.png" alt="">
+                    <h1 class="section__h1--generos" style="color: white;">HipHop</h1>
+                </div>
+                <div class="section__div--generos" onclick="clearAndGenerateArticles(pop)">
+                    <img src="./assets/img/pop.png" alt="">
+                    <h1 class="section__h1--generos" style="color: white;">Pop</h1>
+                </div>
+                <div class="section__div--generos" onclick="clearAndGenerateArticles(mpb)">
+                    <img src="./assets/img/mpb.png" alt="">
+                    <h1 class="section__h1--generos" style="color: white;">MPB</h1>
+                </div>
+                <div class="section__div--generos" onclick="clearAndGenerateArticles(grooves)">
+                    <img src="./assets/img/grooves.png" alt="">
+                    <h1 class="section__h1--generos" style="color: white;">Organic Grooves</h1>
+                </div>
+                <div class="section__div--generos" onclick="clearAndGenerateArticles(electronic)">
+                    <img src="./assets/img/electronic.png" alt="">
+                    <h1 class="section__h1--generos" style="color: white;">Electronic</h1>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="section__h1">Musicas</h1>
+        <section class="section--img">
+            <div class="grid" id="articles-container">
+            </div>
+        </section>
+
+        <div class="section--popup">
+            <div class="section__container">
+                <button id="close-popup-btn" class="close-popup-btn" onclick="closeModal()">&times;</button>
+                <div id="popup-container" class="popup-container">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+</body>
+
+</html>
